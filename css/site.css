@@ -1,0 +1,188 @@
+:root{
+  --brand: #03C4EB;
+  --ink: #0f172a;
+  --muted: #64748b;
+  --surface: #ffffff;
+  --bg: #f6f7fb;
+  --radius: 16px;
+}
+
+html{scroll-behavior:smooth;}
+
+body{
+  font-family: "Cairo", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+section{scroll-margin-top: 92px;}
+
+/* Header */
+.site-header{
+  transition: background-color .25s ease, box-shadow .25s ease, backdrop-filter .25s ease;
+  background: rgba(15, 23, 42, .35);
+  backdrop-filter: blur(10px);
+}
+.site-header.scrolled{
+  background: rgba(15, 23, 42, .92);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, .25);
+}
+
+.navbar-brand{
+  gap: 12px;
+}
+
+.lang-switcher{
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+
+.lang-switcher.btn-brand{
+  box-shadow: 0 10px 24px rgba(3, 196, 235, .22);
+}
+
+.brand-logo{
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Hero */
+.hero{
+  min-height: 100vh;
+  padding-top: 92px;
+  position: relative;
+  color: #fff;
+  background:
+    radial-gradient(1200px 600px at 20% 15%, rgba(3, 196, 235, .25), rgba(0,0,0,0)),
+    linear-gradient(180deg, rgba(2,6,23,.55), rgba(2,6,23,.85)),
+    url("../images/logo/WhatsApp%20Image%202024-12-18%20at%2017.23.48_f926eae0.jpg") center/cover no-repeat;
+}
+
+.hero-card{
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+.hero h1{
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+
+.hero p{
+  color: rgba(255,255,255,.82);
+  margin-bottom: 18px;
+}
+
+.btn-brand{
+  --bs-btn-bg: var(--brand);
+  --bs-btn-border-color: var(--brand);
+  --bs-btn-hover-bg: #02b0d5;
+  --bs-btn-hover-border-color: #02b0d5;
+  --bs-btn-color: #06202a;
+  font-weight: 700;
+}
+
+.btn-ghost{
+  --bs-btn-color: #fff;
+  --bs-btn-border-color: rgba(255,255,255,.55);
+  --bs-btn-hover-bg: rgba(255,255,255,.10);
+  --bs-btn-hover-border-color: rgba(255,255,255,.75);
+  font-weight: 700;
+}
+
+/* Section header */
+.section-header{
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.section-header h2{
+  font-weight: 800;
+  margin: 0;
+}
+
+.section-header p{
+  color: var(--muted);
+  margin: 10px auto 0;
+  max-width: 900px;
+}
+
+.divider{
+  width: 72px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--brand);
+  margin: 14px auto 0;
+}
+
+/* Cards */
+.card-elev{
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, .08);
+}
+
+.icon-pill{
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(3, 196, 235, .12);
+  color: #0286a0;
+  font-size: 22px;
+}
+
+/* Project carousel */
+.project-card .carousel{
+  border-radius: calc(var(--radius) - 2px);
+  overflow: hidden;
+}
+
+.project-card img{
+  height: 340px;
+  object-fit: cover;
+}
+
+@media (max-width: 576px){
+  .project-card img{height: 240px;}
+}
+
+/* Contact */
+.contact-item a{
+  text-decoration: none;
+}
+
+.social-btn{
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(3, 196, 235, .12);
+  color: #0286a0;
+  border: 1px solid rgba(3, 196, 235, .25);
+}
+
+/* Back to top */
+#backToTop{
+  position: fixed;
+  inset-inline-start: 16px;
+  bottom: 16px;
+  z-index: 1040;
+  display: none;
+}
+
+#backToTop.show{display: inline-flex;}
+
+footer{
+  color: rgba(255,255,255,.80);
+  background: #0b1220;
+}
